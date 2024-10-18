@@ -34,19 +34,19 @@ export default function App() {
 
         <ScrollArea className="h-[600px]">
           <TabsContent value="primary">
-            <PrimaryDrugs weight={patient.weight}  age={patient.age}/>
+            <PrimaryDrugs weight={patient.weight} age={patient.age} />
           </TabsContent>
 
           <TabsContent value="limited">
-            <LimitedDrugs weight={patient.weight} />
+            <LimitedDrugs weight={patient.weight} age={patient.age} />
           </TabsContent>
 
           <TabsContent value="vf">
-            <Fibrillation weight={patient.weight} />
+            <Fibrillation weight={patient.weight} age={patient.age} />
           </TabsContent>
 
           <TabsContent value="intubation">
-            <Intubation weight={patient.weight} />
+            <Intubation weight={patient.weight} age={patient.age} />
           </TabsContent>
         </ScrollArea>
       </Tabs>

@@ -20,6 +20,7 @@ export function Header({ patient, onPatientChange }: HeaderProps) {
             <Label htmlFor="name">Nome</Label>
             <Input 
               id="name" 
+              placeholder="Escreva aqui..."
               value={patient.name} 
               onChange={(e) => onPatientChange('name', e.target.value)} 
             />
@@ -27,7 +28,8 @@ export function Header({ patient, onPatientChange }: HeaderProps) {
           <div>
             <Label htmlFor="registry">Registro</Label>
             <Input 
-              id="registry" 
+              id="registry"
+              placeholder="Ex. 123546"
               value={patient.registry} 
               onChange={(e) => onPatientChange('registry', e.target.value)} 
             />

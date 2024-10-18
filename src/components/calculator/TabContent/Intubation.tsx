@@ -5,12 +5,14 @@ import { MedicationRow } from "../MedicationRow"
 
 interface IntubationProps {
     weight: number;
+    age: number;
 }
 
-export function Intubation({ weight }: IntubationProps) {
-    const calculateDose = (baseAmount: number, unit: string) => {
-        const dose = (weight * baseAmount).toFixed(1)
-        return `${dose}${unit}`
+export function Intubation({ weight, age }: IntubationProps) {
+    const calculateDose = (baseAmount: number, unit: string): string => {
+        const ageFactor = age < 1 ? 0.5 : 1; // Exemplo fictício, para crianças menores de 1 ano, a dose é ajustada
+        const dose = (weight * baseAmount * ageFactor).toFixed(1);
+        return `${dose}${unit}`;
     }
 
     return (

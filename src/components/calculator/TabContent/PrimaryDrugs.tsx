@@ -9,12 +9,7 @@ interface PrimaryDrugsProps {
 
 
 export function PrimaryDrugs({ weight, age }: PrimaryDrugsProps) {
-  // const calculateDose = (baseAmount: number, unit: string): string => {
-  //   const dose = (weight * baseAmount).toFixed(1);
-  //   return `${dose}${unit}`;
-  // }
 
-  // Exemplo fictício de ajuste de dose baseada na idade
   const calculateDose = (baseAmount: number, unit: string): string => {
     const ageFactor = age < 1 ? 0.5 : 1; // Exemplo fictício, para crianças menores de 1 ano, a dose é ajustada
     const dose = (weight * baseAmount * ageFactor).toFixed(1);
