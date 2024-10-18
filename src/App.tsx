@@ -13,7 +13,7 @@ export default function App() {
     name: '',
     registry: '',
     age: '',
-    weight: '10',
+    weight: '0',
   })
 
   const handlePatientChange = (field: keyof Patient, value: string) => {
