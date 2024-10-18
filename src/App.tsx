@@ -12,8 +12,8 @@ export default function App() {
   const [patient, setPatient] = useState<Patient>({
     name: '',
     registry: '',
-    age: '',
-    weight: '0',
+    age: 0,
+    weight: 10,
   })
 
   const handlePatientChange = (field: keyof Patient, value: string) => {
@@ -34,7 +34,7 @@ export default function App() {
 
         <ScrollArea className="h-[600px]">
           <TabsContent value="primary">
-            <PrimaryDrugs weight={patient.weight} />
+            <PrimaryDrugs weight={patient.weight}  age={patient.age}/>
           </TabsContent>
 
           <TabsContent value="limited">

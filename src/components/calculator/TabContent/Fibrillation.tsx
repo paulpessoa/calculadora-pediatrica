@@ -2,12 +2,12 @@ import { MedicationCard } from "../MedicationCard"
 import { MedicationRow } from "../MedicationRow"
 
 interface FibrillationProps {
-  weight: string;
+  weight: number;
 }
 
 export function Fibrillation({ weight }: FibrillationProps) {
   const calculateDose = (baseAmount: number, unit: string) => {
-    const dose = (parseFloat(weight) * baseAmount).toFixed(1)
+    const dose = (weight * baseAmount).toFixed(1)
     return `${dose}${unit}`
   }
 

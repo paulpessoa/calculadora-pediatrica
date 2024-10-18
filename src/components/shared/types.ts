@@ -1,8 +1,8 @@
 export interface Patient {
     name: string;
     registry: string;
-    age: string;
-    weight: string;
+    age: number;
+    weight: number;
   }
   
   export interface MedicationRowProps {
